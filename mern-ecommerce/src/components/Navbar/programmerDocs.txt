@@ -1,0 +1,60 @@
+1:
+Name: Nasir Uddin
+District: Sirajganj
+Average Marks: 58.64
+Github: www.github.com/nafim96
+
+2:
+Name: Omar Faruk 
+District: CTG 
+Study: CSE, east delta University 
+Linkdin: https://www.linkedin.com/in/faeruqe/
+
+3.
+Name: Ashik 
+District: Kishorganj 
+Average Marks: 55.58
+Github: www.github.com/ashikbhuyan17
+Daffodil international University (SWE)
+
+4.
+Name: Md Sujon
+District: Bhola
+Average Marks: 55.30
+Github: www.github.com/Md-Sujon
+Green University of Bangladesh
+
+5.
+Imtious Islam
+Feni Computer Institute(TCT)
+Shimpur,Comilla,Bangladesh
+Avg:- 50.98
+Github:- https://github.com/Imtious-coder
+
+6.
+Name:Rahul Mohonto
+District : Rajshahi
+Average Marks:53.82
+Rajshahi University of Engineering & Technology 
+Github : https://github.com/rahulmohonto
+
+7.
+Name: Riaz
+District: Cumilla
+Average Marks: 55.60
+Github:https://github.com/riazakhanda017ksn/
+Dhaka polytenic institute
+
+8.
+Name : Imran Mahmud
+District : Tangail
+Average Marks : 49.64
+Study : National University
+Github : https://github.com/mahmudimran
+
+9.
+https://github.com/SakhawatHossain55 
+Name: Sakhawat Hossain   
+District: Noakhali  
+Avarage Marks: 57.91     
+Github: https://github.com/SakhawatHossain55
