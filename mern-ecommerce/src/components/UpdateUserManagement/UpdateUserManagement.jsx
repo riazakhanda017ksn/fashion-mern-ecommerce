@@ -10,7 +10,7 @@ import {
 import { UPDATE_USER_RESET } from "../../constants/userConstants";
 import DashboardSidebar from "../Dashboard/DashboardSidebar/DashboardSidebar";
 import MetaData from "../MetaData/MetaData";
-
+import "./UpdateUserManagement.css";
 const UpdateUserManagement = () => {
   const alert = useAlert();
   const history = useHistory();
@@ -74,7 +74,7 @@ const UpdateUserManagement = () => {
       <div className="add-product need-padding-for-uploading-product">
         <form encType="multipart/form-data" onSubmit={updateRoleUser}>
           <h1 className="pt-5">Update User</h1>
-          <div className="product-single-input">
+          <div className="admin-make">
             <input
               type="text"
               placeholder="Name"
@@ -83,7 +83,7 @@ const UpdateUserManagement = () => {
               onChange={(e) => setName(e.target.value)}
             />{" "}
           </div>
-          <div className="product-single-input">
+          <div className="admin-make">
             <input
               type="email"
               placeholder="Email"
@@ -93,7 +93,7 @@ const UpdateUserManagement = () => {
             />
           </div>
 
-          <div className="product-single-input">
+          <div className="admin-make">
             <select onChange={(e) => setRole(e.target.value)}>
               <option value="">Select roles</option>
               <option value="user">user</option>

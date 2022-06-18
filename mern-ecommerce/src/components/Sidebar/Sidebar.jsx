@@ -9,7 +9,7 @@ import { IconContext } from "react-icons";
 import { BiLogInCircle } from "react-icons/bi";
 import { logout } from "../../actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
-import { MdDashboardCustomize } from "react-icons/md";
+import DashboardIcon from "@material-ui/icons/Dashboard";
 
 function Sidebar() {
   const { user } = useSelector((state) => state.user);
@@ -52,7 +52,7 @@ function Sidebar() {
             {user?.role === "admin" && (
               <li className="nav-text">
                 <Link to="/dashboard">
-                  <MdDashboardCustomize />
+                  <DashboardIcon />
                   <span>dashboard</span>
                 </Link>
               </li>

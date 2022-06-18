@@ -174,7 +174,7 @@ const SingleProductDetails = ({ match }) => {
             <div className="product_details_name">
               <div className="product-introduce">
                 <h1>{products?.name}</h1>
-                <span>product#{products?._id}</span>
+                <span className="productId">product#{products?._id}</span>
                 <h4>${products?.price}</h4>
                 <div className="grid-system">
                   <div className="quantity_div">
@@ -199,10 +199,7 @@ const SingleProductDetails = ({ match }) => {
                 </div>
                 <div className="inStock__Status">
                   <h6>
-                    Stock -
-                    <span className="color-black">
-                      {products?.Stock < 1 ? "Stock Out" : "InStock"}
-                    </span>
+                    Stock -<> {products?.Stock < 1 ? "Stock Out" : "InStock"}</>
                   </h6>
                   <p>{products?.description}</p>
                   <button

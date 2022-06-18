@@ -89,3 +89,34 @@
         margin: 43px 0;
         margin-top: 95px;
     }
+
+
+    .user-greeting h3 {
+        padding-top: 15px;
+        padding-left: 42px;
+        position: relative;
+        top: 84px;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-weight: 900;
+    }
+
+    span.user {
+        display: inline-block;
+        color: #767676;
+        font-weight: 900;
+    }
+
+
+    .weekend__sales {
+        padding: 10px 38px;
+        margin-bottom: 30px;
+    }
+
+    .weekend__sales h3 {
+        position: relative;
+        font-family: 'Montserrat';
+        font-weight: 900;
+        bottom: 10px;
+        font-size: 30px;
+    }

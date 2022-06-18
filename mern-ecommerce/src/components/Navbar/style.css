@@ -39,3 +39,9 @@
     font-size: 18px;
     padding-bottom: 16px;
 }
+.menuBurgerItem {
+    height: 1px !important;
+    width: 2.8vmax;
+    border-radius: 30px;
+    transition: all .4s;
+}

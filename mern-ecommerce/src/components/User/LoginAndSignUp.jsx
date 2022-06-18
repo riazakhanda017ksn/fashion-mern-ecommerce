@@ -1,17 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, useHistory, useLocation } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./LoginAndSignUp.css";
 import { useDispatch, useSelector } from "react-redux";
 import { clearError, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import Loader from "../../Loader/Loader";
-const LoginAndSignUp = ({ history, location }) => {
+const LoginAndSignUp = () => {
   const dispatch = useDispatch((state) => state.user);
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
   const alert = useAlert();
+  const location = useLocation();
+  const history = useHistory();
   const [addClass, setAddClass] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");

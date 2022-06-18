@@ -67,16 +67,39 @@ const ViewManagement = () => {
   const { products } = useSelector((state) => state.products);
   const { orders } = useSelector((state) => state.allOrders);
   const { users } = useSelector((state) => state.allUsers);
+  const { user } = useSelector((state) => state.user);
+
   useEffect(() => {
     dispatch(getAdminProduct());
     dispatch(getAllOrders());
     dispatch(getAllUser());
   }, [dispatch]);
+  ///greeting
+  const date = new Date();
+  const hour = date.getHours();
+
   return (
     <>
       <>
         <DashboardSidebar />
       </>
+      <div className="user-greeting">
+        {hour >= 12 ? (
+          hour >= 16 ? (
+            <h3>
+              <span className="user"> {user?.name}</span>, Good afternoon
+            </h3>
+          ) : (
+            <h3>
+              <span className="user"> {user?.name}</span>, Good Night
+            </h3>
+          )
+        ) : (
+          <h3>
+            <span className="user"> {user?.name}</span>, Good morning
+          </h3>
+        )}
+      </div>
       <div className="main-dashboard-management py-5 ">
         <div className="total-product dashboard-customization">
           <h2>products </h2>
@@ -90,6 +113,9 @@ const ViewManagement = () => {
           <h2>users</h2>
           <h2>{users?.length}</h2>
         </div>
+      </div>
+      <div className='weekend__sales'>
+        <h3>Weekend Sales</h3>
       </div>
       <div style={{ width: "100%", height: 300 }} className="rechart">
         <ResponsiveContainer>

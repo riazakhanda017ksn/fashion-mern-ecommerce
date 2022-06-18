@@ -19,10 +19,11 @@ const Search = ({ history }) => {
       <Navbar />
       <div className="Search_container">
         <form className="searchBox" onSubmit={searchSubmitHandler}>
+          <h3>Search Your favorite cloth</h3>
           <div className="search-div animate__animated animate__fadeInLeft">
             <input
               type="search"
-              placeholder="Search a product ........"
+              placeholder="Search"
               onChange={(e) => setKeyword(e.target.value)}
             />
             <button type="submit">
