@@ -11,3 +11,28 @@
     font-size: 29px !important;
     font-family: 'Sacramento';
 }
+
+@media only screen and (max-width: 990px)  {
+    .menuBurger {
+      width: 3vmax;
+      height: 2vmax !important;
+      position: fixed;
+      top: 2vmax;
+      left: 3vmax !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 1vmax;
+      overflow: hidden;
+      z-index: 9999999999999999999 !important;
+  }
+  .nav4 svg {
+    font-size: 19px;
+    margin-bottom: 12px !important;
+    position: relative;
+    top: 10px;
+}
+}
+

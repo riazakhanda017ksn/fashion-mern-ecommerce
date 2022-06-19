@@ -114,6 +114,7 @@ svg#profileIcon {
 }
 
 @media only screen and (max-width: 990px)  {
+  
   .product-single-input {
     width: 100%;
     position: absolute;

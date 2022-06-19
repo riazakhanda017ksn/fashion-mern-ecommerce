@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAdminProduct } from "../../../actions/productAction";
 import { getAllUser } from "../../../actions/userAction";
 import { getAllOrders } from "../../../actions/orderAction";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -75,8 +76,6 @@ const ViewManagement = () => {
     dispatch(getAllUser());
   }, [dispatch]);
   ///greeting
-  const date = new Date();
-  const hour = date.getHours();
 
   return (
     <>
@@ -84,21 +83,9 @@ const ViewManagement = () => {
         <DashboardSidebar />
       </>
       <div className="user-greeting">
-        {hour >= 12 ? (
-          hour >= 16 ? (
-            <h3>
-              <span className="user"> {user?.name}</span>, Good afternoon
-            </h3>
-          ) : (
-            <h3>
-              <span className="user"> {user?.name}</span>, Good Night
-            </h3>
-          )
-        ) : (
-          <h3>
-            <span className="user"> {user?.name}</span>, Good morning
-          </h3>
-        )}
+        <h3>
+          hey <span className="user"> {user?.name}</span>, welcome
+        </h3>
       </div>
       <div className="main-dashboard-management py-5 ">
         <div className="total-product dashboard-customization">
@@ -114,8 +101,10 @@ const ViewManagement = () => {
           <h2>{users?.length}</h2>
         </div>
       </div>
-      <div className='weekend__sales'>
-        <h3>Weekend Sales</h3>
+      <div className="weekend__sales">
+        <h3>
+          Weekend <span className="seven-six">Sales</span>{" "}
+        </h3>
       </div>
       <div style={{ width: "100%", height: 300 }} className="rechart">
         <ResponsiveContainer>
@@ -135,6 +124,55 @@ const ViewManagement = () => {
             <Area type="monotone" dataKey="uv" stroke="#767676" fill="black" />
           </AreaChart>
         </ResponsiveContainer>
+      </div>
+      <div className="user-order-list-container">
+        <div className="user-title-ds ds-space">
+          <h3>
+            Recent <span className="seven-six"> Order's</span>{" "}
+          </h3>
+          <div className="user-order-show">
+            {orders?.map((order) => (
+              <>
+                <div
+                  className="user-cart need-customization-more"
+                  key={order?._id}
+                >
+                  <h6>{order?._id.slice(0, 17)}</h6>
+                  <h6>{order?.shippingInfo?.address}</h6>
+                  <h6>{order?.shippingInfo?.phoneNo}</h6>
+                </div>
+              </>
+            ))}
+          </div>
+        </div>
+        <div className="user-title-ds">
+          <h3>
+            total <span className="seven-six">User</span>{" "}
+          </h3>
+          <div className="user-showing">
+            {users.map((user) => (
+              <>
+                <div
+                  className="user-cart need-customization-more"
+                  key={user?._id}
+                >
+                  <img
+                    className="user-img-of-ds"
+                    src={user?.avatar?.url}
+                    alt=""
+                  />
+                  <h6>{user.name}</h6>
+                  <h6>Join on {user?.createdAt?.slice(0, 10)}</h6>
+                </div>
+              </>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="explore__more">
+        <Link to="/">
+          <h2>Explore More</h2>
+        </Link>
       </div>
     </>
   );

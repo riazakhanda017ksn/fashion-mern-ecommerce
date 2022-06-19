@@ -142,7 +142,7 @@ const GetProductsReview = () => {
       {reviews && reviews.length > 0 ? (
         <div className="order-of-user mb-5 pb-5">
           <div className="products___item">
-            <h1>all orders</h1>
+            <h1>get product review</h1>
           </div>
           <DataGrid
             rows={rows}

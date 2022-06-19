@@ -46,8 +46,35 @@
     border: 1px solid rgb(0, 0, 0);
 }
 
-
 @media only screen and (max-width: 990px)  {
+    
+    .ds-space {
+        margin-left: 0px !important;
+    }
+    .user-order-show {
+        background: #dddddd69;
+        padding: 0 26px;
+        padding-right: 0;
+        margin-right: 35px;
+        border-radius: 18px;
+        height: 60vh;
+        overflow: auto;
+        margin-bottom: 50px;
+    }
+    .product-single-input {
+        width: 100%;
+        position: relative;
+        right: 0;
+        padding: 0px 0px !important;
+    }
+    .user-order-list-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin:0 20px !important;
+        }
     .main-dashboard-management{
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -119,4 +146,91 @@
         font-weight: 900;
         bottom: 10px;
         font-size: 30px;
+        text-transform: uppercase;
     }
+    .user-order-list-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+
+        .user-img img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: 35px;
+        }
+
+        .user-parents {
+            display: flex;
+            align-items: center;
+
+        }
+
+        img.user-img-of-ds {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+
+        .user-showing {
+            background: #dddddd69;
+            padding: 0 26px;
+            padding-right: 0;
+            margin-right: 36px;
+            border-radius: 18px;
+            height: 60vh;
+            overflow: auto;
+            margin-bottom: 50px;
+        }
+        .user-order-show {
+            background: #dddddd69;
+            padding: 0 26px;
+            padding-right: 0;
+            margin-right: 36px;
+            border-radius: 18px;
+            height: 60vh;
+            overflow: auto;
+            margin-bottom: 50px;
+        }
+
+        .user-cart.need-customization-more {
+            border: none;
+            padding: 16px 0;
+        }
+        .user-cart.need-customization-more h6 {
+            font-family: 'Montserrat';
+            font-size: 13px;
+            font-weight: 700;
+            color: #484848;
+            width: 190px;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+
+        h6.need-position-or-margin-for-alignment {
+            position: relative;
+            left: -70px;
+        }
+
+        .user-title-ds h3 {
+            text-transform: uppercase;
+            padding: 25px 0;
+            font-family: 'Montserrat';
+            font-weight: 900;
+            font-size: 31px;
+            margin-top: 20px;
+        }
+
+        .seven-six{
+            color: #767676;
+        }
+
+        .ds-space {
+            margin-left: 50px;
+        }
