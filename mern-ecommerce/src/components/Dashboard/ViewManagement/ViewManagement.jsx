@@ -169,11 +169,6 @@ const ViewManagement = () => {
           </div>
         </div>
       </div>
-      <div className="explore__more">
-        <Link to="/">
-          <h2>Explore More</h2>
-        </Link>
-      </div>
     </>
   );
 };
