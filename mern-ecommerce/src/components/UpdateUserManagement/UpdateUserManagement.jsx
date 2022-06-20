@@ -24,14 +24,7 @@ const UpdateUserManagement = () => {
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   const dispatch = useDispatch();
-  const updateRoleUser = (e) => {
-    e.preventDefault();
-    const myForm = new FormData();
-    myForm.set("role", role);
-    myForm.set("email", email);
-    myForm.set("name", name);
-    dispatch(updateUser(match.params.id, myForm));
-  };
+
   ///
   useEffect(() => {
     if (user && user._id !== userId) {
@@ -65,14 +58,21 @@ const UpdateUserManagement = () => {
     user,
     userId,
   ]);
-
+  const updateRoleUser = (e) => {
+    e.preventDefault();
+    const myForm = new FormData();
+    myForm.set("name", name);
+    myForm.set("email", email);
+    myForm.set("role", role);
+    dispatch(updateUser(userId, myForm));
+  };
   return (
     <>
       <MetaData title="USER STATUS CHANGE" />
       <DashboardSidebar />
 
       <div className="add-product need-padding-for-uploading-product">
-        <form encType="multipart/form-data" onSubmit={updateRoleUser}>
+        <form onSubmit={updateRoleUser}>
           <h1 className="pt-5">Update User</h1>
           <div className="admin-make">
             <input
@@ -94,7 +94,7 @@ const UpdateUserManagement = () => {
           </div>
 
           <div className="admin-make">
-            <select onChange={(e) => setRole(e.target.value)}>
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="">Select roles</option>
               <option value="user">user</option>
               <option value="admin">admin</option>

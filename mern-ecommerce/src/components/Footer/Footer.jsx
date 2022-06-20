@@ -20,8 +20,8 @@ const Footer = () => {
             quality and performance of every product we create.
           </p>
           <p>
-            This is a demonstration of the Symmetry theme for Shopify.
-            Essentials, Outerwear & Activewear kindly donated by Varley
+            This is a demonstration of the Symmetry theme for UI/UX. Essentials,
+            Outerwear & Activewear kindly donated by Varley
           </p>
         </div>
 
