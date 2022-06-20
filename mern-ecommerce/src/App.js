@@ -35,6 +35,9 @@ import Users from "./components/Users/Users";
 import UpdateUserManagement from "./components/UpdateUserManagement/UpdateUserManagement";
 import GetProductsReview from "./components/GetProductsReview/GetProductsReview";
 import WebManage from "./components/WebManage/WebManage";
+import ServiceManagement from "./components/ServiceManagement/ServiceManagement";
+import ContactManagement from "./components/ContactManagement/ContactManagement";
+import AboutManagementAboutManagement from "./components/AboutManagement/AboutManagementAboutManagement";
 function App() {
   // const Elements = useElements();
   // console.log("Elements", Elements);
@@ -57,6 +60,15 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomeManagement />
+          </Route>
+          <Route path="/services">
+            <ServiceManagement />
+          </Route>
+          <Route path="/contact">
+            <ContactManagement />
+          </Route>
+          <Route path="/about">
+            <AboutManagementAboutManagement />
           </Route>
           <Route path="/product/:id" component={SingleProductDetails} />
           <Route exact path="/products" component={ProductShowWithCategories} />

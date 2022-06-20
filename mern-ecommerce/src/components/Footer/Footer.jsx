@@ -29,7 +29,7 @@ const Footer = () => {
           <h4>Customer Support</h4>
           <ul>
             <li>
-              <Link to="/">Customer Service</Link>
+              <Link to="/services">Customer Service</Link>
             </li>
             <li>
               <Link to="/">Shipping and Delivery</Link>
@@ -41,10 +41,10 @@ const Footer = () => {
               <Link to="/">Size Charts</Link>
             </li>
             <li>
-              <Link to="/">Email Signup</Link>
+              <Link to="/contact">Email Signup</Link>
             </li>
             <li>
-              <Link to="/">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -108,7 +108,7 @@ const Footer = () => {
         <p>
           @all right reserved{" "}
           <a
-            href="https://it-z-riaz-site.web.app/"
+            href="https://riazakhanda.web.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
