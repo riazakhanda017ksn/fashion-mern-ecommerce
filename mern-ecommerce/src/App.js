@@ -38,10 +38,13 @@ import WebManage from "./components/WebManage/WebManage";
 import ServiceManagement from "./components/ServiceManagement/ServiceManagement";
 import ContactManagement from "./components/ContactManagement/ContactManagement";
 import AboutManagementAboutManagement from "./components/AboutManagement/AboutManagementAboutManagement";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { ClockLoader } from "react-spinners";
 function App() {
   // const Elements = useElements();
   // console.log("Elements", Elements);
   const [stripeApiKey, setStripeApiKey] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function getStripeApiKey() {
     const { data } = await axios.get("/api/v1/stripeApiKey");
@@ -50,6 +53,10 @@ function App() {
 
   //
   useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
     store.dispatch(loadUser());
     getStripeApiKey();
   }, []);
@@ -57,9 +64,17 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/">
-            <HomeManagement />
+            {loading ? (
+              <div className="loader-item">
+                <ClockLoader color={"black"} loading={loading} size={150} />
+                <h1>please wait </h1>
+              </div>
+            ) : (
+              <HomeManagement />
+            )}
           </Route>
           <Route path="/services">
             <ServiceManagement />

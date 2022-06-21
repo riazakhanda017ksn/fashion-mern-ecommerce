@@ -32,16 +32,13 @@ const Footer = () => {
               <Link to="/services">Customer Service</Link>
             </li>
             <li>
-              <Link to="/">Shipping and Delivery</Link>
+              <Link to="/products">product</Link>
             </li>
             <li>
-              <Link to="/">Returns</Link>
+              <Link to="/account">Account</Link>
             </li>
             <li>
-              <Link to="/">Size Charts</Link>
-            </li>
-            <li>
-              <Link to="/contact">Email Signup</Link>
+              <Link to="/login">Email Signup</Link>
             </li>
             <li>
               <Link to="/contact">Contact Us</Link>
@@ -59,10 +56,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <a
+                  href="https://goo.gl/maps/65dDBsL52BM2CpEE9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MapOutlinedIcon />
                   map
-                </Link>
+                </a>
               </li>
               <li>
                 <a
@@ -80,22 +81,38 @@ const Footer = () => {
               </p>
               <ul>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.facebook.com/nisshongojiboner.pothik/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FacebookIcon />
                   </a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.instagram.com/riazahmedakhanda/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <InstagramIcon />
                   </a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <LinkedInIcon />
                   </a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://riazahmedakhanda.web.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <PublicIcon />
                   </a>
                 </li>
@@ -108,7 +125,7 @@ const Footer = () => {
         <p>
           @all right reserved{" "}
           <a
-            href="https://riazakhanda.web.app/"
+            href="https://riazahmedakhanda.web.app/"
             target="_blank"
             rel="noopener noreferrer"
           >

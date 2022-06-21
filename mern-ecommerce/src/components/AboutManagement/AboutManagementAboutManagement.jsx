@@ -9,18 +9,26 @@ const AboutManagementAboutManagement = () => {
     <>
       <Navbar />
       <div className="AboutManagementAboutManagement">
-        <div className="about-me">
+        <div className="about-me" data-aos="fade-right">
           <h1> DEV Riaz </h1>
           <h2>Front-end Developer & Web UI/UX Designer</h2>
         </div>
-        <div className="about-me mt-5" style={{ paddingTop: "250px" }}>
+        <div
+          className="about-me mt-5"
+          style={{ paddingTop: "250px" }}
+          data-aos="fade-right"
+        >
           <h1> About Riaz </h1>
           <h2>
             Frontend developer who cares deeply about user experience. Serious
             passion for UI design and new technologies.
           </h2>
         </div>
-        <div className="about-me mt-5" style={{ paddingTop: "250px" }}>
+        <div
+          className="about-me mt-5"
+          style={{ paddingTop: "250px" }}
+          data-aos="fade-right"
+        >
           <h1> Follow Riaz </h1>
           <ul>
             <li>
