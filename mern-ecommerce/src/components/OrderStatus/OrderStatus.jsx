@@ -70,7 +70,7 @@ const OrderStatus = () => {
           <form encType="multipart/form-data" onSubmit={updateStatusOfOrder}>
             {" "}
             <h1 className="pt-5">Update Order</h1>
-            <div className="product-single-input">
+            <div className="admin-make">
               <select
                 onChange={(e) => setStatus(e.target.value)}
                 className="mt-3"
