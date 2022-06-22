@@ -34,7 +34,7 @@ const UpdatePassword = ({ history }) => {
 
   useEffect(() => {
     if (error) {
-      alert.error("your is not authenticated");
+      alert.error(" not authenticated");
       dispatch(clearError());
     }
     if (isUpdated) {

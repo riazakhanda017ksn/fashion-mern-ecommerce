@@ -28,14 +28,14 @@ const ForgotPasswordAuthentication = () => {
   ///
   useEffect(() => {
     if (error) {
-      alert.error("your is not authenticated");
+      alert.error("your email is not authenticated");
       dispatch(clearError());
     }
     if (message) {
       alert.success(message);
       history.push("/login");
     }
-  }, [dispatch, error, alert, message]);
+  }, [dispatch, error, alert, message, history]);
   return (
     <>
       {loading ? (

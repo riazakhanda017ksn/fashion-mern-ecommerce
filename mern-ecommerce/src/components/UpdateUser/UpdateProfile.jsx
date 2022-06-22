@@ -53,7 +53,7 @@ const UpdateProfile = ({ history }) => {
       setAvatarPreview(user?.avatar?.url);
     }
     if (error) {
-      alert.error("your is not authenticated");
+      alert.error("your is email not authenticated");
       dispatch(clearError());
     }
     if (isUpdated) {
