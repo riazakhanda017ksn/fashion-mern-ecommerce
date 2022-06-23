@@ -24,10 +24,10 @@ const HomeManagement = () => {
       <SliderOfCategories />
       <HomeCategories />
       <Product />
-      {/* <Subscribe /> */}
       <TittleSection />
       <WebReview />
       <Contact />
+      <Subscribe />
       <Footer />
     </>
   );

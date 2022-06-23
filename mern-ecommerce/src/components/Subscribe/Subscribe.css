@@ -1,16 +1,16 @@
 
-  .video-of-overly {
+  .white-overly {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.713);
+    background: rgba(255, 255, 255, 0.713);
     z-index: 888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-clip-path: polygon(0 0, 64% 0, 42% 100%, 0% 100%);
+    clip-path: polygon(0 0, 64% 0, 42% 100%, 0% 100%);
+    padding: 200px 0;
+    
 }
 
 
@@ -81,4 +81,65 @@
     padding: 12px;
     border-radius: 62px;
 }
+}
+.form-section {
+    width: 47%;
+    text-align: center;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 46px;
+    border: 1px solid black;
+    padding: 5px;
+}
+.form input {
+    width: 100%;
+    background: none;
+    padding: 10px;
+    border: none;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 12px;
+    color: black;
+    outline:none
+}
+.form input::placeholder {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: black;
+    
+}
+
+.form button {
+    border: none;
+    background: none;
+}
+.form-section h1 {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 25px;
+    line-height: 48px;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 990px)  {
+    .white-overly {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.713);
+        z-index: 888;
+        padding: 400px 0;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .form-section {
+        width: 100%;
+        text-align: center;
+    }
 }
