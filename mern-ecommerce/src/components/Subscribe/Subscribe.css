@@ -83,15 +83,17 @@
 }
 }
 .form-section {
-    width: 47%;
     text-align: center;
+    width: 47%;
+    padding: 0 80px;
 }
 .form {
+    border: 1px solid #000;
     display: flex;
     justify-content: space-between;
-    margin: 0 46px;
-    border: 1px solid black;
+    margin: 0 0px;
     padding: 5px;
+    padding-left: 0;
 }
 .form input {
     width: 100%;
@@ -116,13 +118,14 @@
     background: none;
 }
 .form-section h1 {
-    font-family: 'Montserrat';
-    color: black;
+    color: #000;
+    font-family: Montserrat;
     font-size: 25px;
+    font-weight: 400;
     line-height: 48px;
     margin-bottom: 27px;
     text-transform: uppercase;
-    font-weight: 400;
+    padding: 0 0px;
 }
 
 @media only screen and (max-width: 990px)  {
