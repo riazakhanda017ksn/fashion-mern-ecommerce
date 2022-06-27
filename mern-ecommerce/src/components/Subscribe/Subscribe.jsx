@@ -19,7 +19,6 @@ const Subscribe = () => {
       dispatch(clearError());
     }
     if (success) {
-      alert.success("thank you for subscribe");
       history.push("/");
       dispatch({ type: NEW_SUBSCRIBE_RESET });
     }
@@ -30,9 +29,12 @@ const Subscribe = () => {
     const myForm = new FormData();
     myForm.set("email", email);
     dispatch(createSubscribe(myForm));
-    e.target.reset();
   };
-
+  function refreshPage() {
+    setTimeout(() => {
+      alert.success("thank you for subscribe");
+    }, 2000);
+  }
   return (
     <>
       <div className="video-section">
@@ -49,7 +51,7 @@ const Subscribe = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <button type="submit">
+                <button type="submit" onClick={refreshPage}>
                   <SendIcon />
                 </button>
               </div>
