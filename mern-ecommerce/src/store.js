@@ -30,6 +30,10 @@ import {
   reviewAllReducer,
   reviewReducerManagement,
 } from "./reducers/reviewReducer";
+import {
+  newSubscribeReducer,
+  subscribeAllReducer,
+} from "./reducers/subscribeReducer";
 
 const reducer = combineReducers({
   products: productsReducer,
@@ -53,6 +57,8 @@ const reducer = combineReducers({
   webReview: newREviewReducer,
   peopleReview: reviewAllReducer,
   deleteReview: reviewReducerManagement,
+  subscribe: newSubscribeReducer,
+  getSubscribe: subscribeAllReducer,
 });
 let initialState = {
   cart: {

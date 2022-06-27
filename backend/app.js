@@ -25,12 +25,14 @@ const user = require("./productRouter/userRoute");
 const order = require("./productRouter/orderRoute");
 const payment = require("./productRouter/paymentRoute");
 const review = require("./productRouter/reviewRouter");
+const subscribe = require("./productRouter/subscribeRourter");
 //
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", review);
+app.use("/api/v1", subscribe);
 //
 app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
 app.get("*", (req, res) => {

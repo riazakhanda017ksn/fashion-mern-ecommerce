@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from "react";
+import React, { useEffect } from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -9,7 +9,22 @@ import PublicIcon from "@mui/icons-material/Public";
 import EditLocationOutlinedIcon from "@mui/icons-material/EditLocationOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
+import { useAlert } from "react-alert";
+import { useDispatch, useSelector } from "react-redux";
+import { clearError, getAllSubscribe } from "../../actions/subscribeAction";
 const Footer = () => {
+  const alert = useAlert();
+  const dispatch = useDispatch();
+  const { loading, error, subscribe } = useSelector(
+    (state) => state.getSubscribe
+  );
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearError());
+    }
+    dispatch(getAllSubscribe());
+  }, [dispatch, error, alert]);
   return (
     <div className="footer-container">
       <div className="footer">
@@ -115,6 +130,16 @@ const Footer = () => {
                   >
                     <PublicIcon />
                   </a>
+                </li>
+              </ul>
+            </div>
+            <div className="social-div">
+              <p>
+                Subscribe <ArrowRightAltOutlinedIcon />
+              </p>
+              <ul>
+                <li>
+                  <a>There are {subscribe?.length} people subscribed.</a>
                 </li>
               </ul>
             </div>
