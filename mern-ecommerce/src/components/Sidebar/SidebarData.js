@@ -48,7 +48,7 @@ export const SidebarData = [
   },
   {
     title: "Contact",
-    path: "/",
+    path: "/contact",
     icon: <AiIcons.AiOutlinePhone />,
     cName: "nav-text",
     cName2: "",

@@ -7,13 +7,6 @@ import { MdRateReview } from "react-icons/md";
 
 export const data = [
   {
-    title: "Cart",
-    path: "/Cart",
-    icon: <AiIcons.AiOutlineShopping />,
-    cName: "nav-text customization-for-text",
-    cName2: "",
-  },
-  {
     title: "Products",
     path: "/admin/products",
     icon: <RiProductHuntLine />,
