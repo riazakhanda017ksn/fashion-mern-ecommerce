@@ -39,13 +39,13 @@ app.use("/api/v1", subscribe);
 //   res.sendFile(path.resolve(__dirname, "../mern-ecommerce/build/index.html"));
 // });
 
-// app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
-// app.get("*", function (_, res) {
-//   res.sendFile(
-//     path.join(__dirname, "../mern-ecommerce/build/index.html"),
-//     function (err) {
-//       res.status(500).send(err);
-//     }
-//   );
-// });
+app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "../mern-ecommerce/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 module.exports = app;
