@@ -34,8 +34,18 @@ app.use("/api/v1", payment);
 app.use("/api/v1", review);
 app.use("/api/v1", subscribe);
 //
+// app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../mern-ecommerce/build/index.html"));
+// });
+
 app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../mern-ecommerce/build/index.html"));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "../mern-ecommerce/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });
 module.exports = app;
