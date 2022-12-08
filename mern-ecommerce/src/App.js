@@ -41,8 +41,6 @@ import AboutManagementAboutManagement from "./components/AboutManagement/AboutMa
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { ClockLoader } from "react-spinners";
 function App() {
-  // const Elements = useElements();
-  // console.log("Elements", Elements);
   const [stripeApiKey, setStripeApiKey] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -60,7 +58,7 @@ function App() {
     store.dispatch(loadUser());
     getStripeApiKey();
   }, []);
-
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
   return (
     <>
       <Router>
