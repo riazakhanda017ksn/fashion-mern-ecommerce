@@ -34,9 +34,9 @@ app.use("/api/v1", payment);
 app.use("/api/v1", review);
 app.use("/api/v1", subscribe);
 
-app.use(express.static(path.join(__dirname + "../mern-ecommerce/build")));
+app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
 app.get("*", (_, res) => {
-  res.sendFile(path.join(__dirname + "../mern-ecommerce/build/index.html"));
+  res.sendFile(path.join(__dirname, "../mern-ecommerce/build/index.html"));
 });
 
 // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix mern-ecommerce && npm run build --prefix mern-ecommerce"
