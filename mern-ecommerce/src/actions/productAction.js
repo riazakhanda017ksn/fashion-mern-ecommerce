@@ -43,9 +43,9 @@ export const getProduct =
   async (dispatch) => {
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
-      let link = `https://fashion-mern-ecommerce-i28m.vercel.app/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings[0]}&ratings[lte]=${ratings[1]}`;
+      let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings[0]}&ratings[lte]=${ratings[1]}`;
       if (category) {
-        link = `https://fashion-mern-ecommerce-i28m.vercel.app/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings[0]}&ratings[lte]=${ratings[1]}`;
+        link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings[0]}&ratings[lte]=${ratings[1]}`;
       }
       const { data } = await axios.get(link);
       dispatch({
@@ -63,9 +63,7 @@ export const getProduct =
 export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
-    const { data } = await axios.get(
-      "https://fashion-mern-ecommerce-i28m.vercel.app/admin/products"
-    );
+    const { data } = await axios.get("/api/v1/admin/products");
     dispatch({ type: ADMIN_PRODUCT_SUCCESS, payload: data.products });
   } catch (error) {
     dispatch({
@@ -78,9 +76,7 @@ export const getAdminProduct = () => async (dispatch) => {
 export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/product/${id}`
-    );
+    const { data } = await axios.get(`/api/v1/product/${id}`);
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
       payload: data.product,
@@ -101,11 +97,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.put(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/review`,
-      reviewData,
-      config
-    );
+    const { data } = await axios.put(`/api/v1/review`, reviewData, config);
 
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -128,7 +120,7 @@ export const createProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/admin/product/new`,
+      `/api/v1/admin/product/new`,
       productData,
       config
     );
@@ -153,7 +145,7 @@ export const createProduct = (productData) => async (dispatch) => {
 //     };
 
 //     const { data } = await axios.put(
-//       `https://fashion-mern-ecommerce-i28m.vercel.app/admin/product/${id}`,
+//       `/reviews/api/v1/admin/product/${id}`,
 //       productData,
 //       config
 //     );
@@ -179,7 +171,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/admin/product/${id}`,
+      `/reviews/api/v1/admin/product/${id}`,
       productData,
       config
     );
@@ -201,9 +193,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
 
-    const { data } = await axios.delete(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/admin/product/${id}`
-    );
+    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
 
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -221,9 +211,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 export const getAllProductReview = (id) => async (dispatch) => {
   try {
     dispatch({ type: ALL_REVIEW_REQUEST });
-    const { data } = await axios.get(
-      `https://fashion-mern-ecommerce-i28m.vercel.app/reviews?id=${id}`
-    );
+    const { data } = await axios.get(`/api/v1/reviews?id=${id}`);
     dispatch({ type: ALL_REVIEW_SUCCESS, payload: data.reviews });
   } catch (error) {
     dispatch({
@@ -240,7 +228,7 @@ export const deleteProductReview =
       dispatch({ type: DELETE_REVIEW_REQUEST });
 
       const { data } = await axios.delete(
-        `https://fashion-mern-ecommerce-i28m.vercel.app/reviews?id=${reviewId}&productId=${productId}`
+        `/api/v1/reviews?id=${reviewId}&productId=${productId}`
       );
 
       dispatch({

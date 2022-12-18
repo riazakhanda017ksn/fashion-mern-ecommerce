@@ -45,12 +45,9 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   async function getStripeApiKey() {
-    const { data } = await axios.get(
-      "https://fashion-mern-ecommerce-i28m.vercel.app/stripeApiKey"
-    );
+    const { data } = await axios.get("/api/v1/stripeApiKey");
     setStripeApiKey(data.stripeApiKey);
   }
-
   //
   useEffect(() => {
     setLoading(true);

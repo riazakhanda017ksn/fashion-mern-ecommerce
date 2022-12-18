@@ -60,7 +60,7 @@ const Payment = () => {
         },
       };
       const { data } = await axios.post(
-        "https://fashion-mern-ecommerce-i28m.vercel.app/payment/process",
+        "/api/v1/payment/process",
         paymentData,
         config
       );
