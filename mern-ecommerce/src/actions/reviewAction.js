@@ -19,7 +19,11 @@ export const createREview = (reviewData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.post(`/api/v1/addReview`, reviewData, config);
+    const { data } = await axios.post(
+      `https://fashion-mern-ecommerce-i28m.vercel.app/addReview`,
+      reviewData,
+      config
+    );
 
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -36,7 +40,9 @@ export const createREview = (reviewData) => async (dispatch) => {
 export const getAllReviews = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_WEB_REVIEW_REQUEST });
-    const { data } = await axios.get("/api/v1/getReview");
+    const { data } = await axios.get(
+      "https://fashion-mern-ecommerce-i28m.vercel.app/getReview"
+    );
     dispatch({ type: ALL_WEB_REVIEW_SUCCESS, payload: data.reviews });
   } catch (error) {
     dispatch({
@@ -50,7 +56,9 @@ export const deleteWebReview = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_REQUEST_WEB });
 
-    const { data } = await axios.delete(`/api/v1/deleteReview/${id}`);
+    const { data } = await axios.delete(
+      `https://fashion-mern-ecommerce-i28m.vercel.app/deleteReview/${id}`
+    );
 
     dispatch({
       type: DELETE_SUCCESS_WEB,

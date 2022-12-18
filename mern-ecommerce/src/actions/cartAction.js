@@ -6,7 +6,9 @@ import {
 } from "../constants/cartConstant";
 ///add_to_cart
 export const addToCartItem = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/v1/product/${id}`);
+  const { data } = await axios.get(
+    `https://fashion-mern-ecommerce-i28m.vercel.app/product/${id}`
+  );
   dispatch({
     type: ADD_TO_CART,
     payload: {

@@ -17,7 +17,7 @@ export const createSubscribe = (subscribeData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/v1/addSubscribe`,
+      `https://fashion-mern-ecommerce-i28m.vercel.app/addSubscribe`,
       subscribeData,
       config
     );
@@ -37,7 +37,9 @@ export const createSubscribe = (subscribeData) => async (dispatch) => {
 export const getAllSubscribe = () => async (dispatch) => {
   try {
     dispatch({ type: GET_SUBSCRIBE_REQUEST });
-    const { data } = await axios.get("/api/v1/subscribes");
+    const { data } = await axios.get(
+      "https://fashion-mern-ecommerce-i28m.vercel.app/subscribes"
+    );
     dispatch({ type: GET_SUBSCRIBE_SUCCESS, payload: data.subscribe });
   } catch (error) {
     dispatch({

@@ -27,12 +27,12 @@ const payment = require("./productRouter/paymentRoute");
 const review = require("./productRouter/reviewRouter");
 const subscribe = require("./productRouter/subscribeRourter");
 //
-app.use("/api/v1", product);
-app.use("/api/v1", user);
-app.use("/api/v1", order);
-app.use("/api/v1", payment);
-app.use("/api/v1", review);
-app.use("/api/v1", subscribe);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", product);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", user);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", order);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", payment);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", review);
+app.use("https://fashion-mern-ecommerce-i28m.vercel.app", subscribe);
 
 app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
 app.get("*", (_, res) => {
