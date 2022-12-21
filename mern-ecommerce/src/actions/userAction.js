@@ -39,7 +39,7 @@ import {
 
 import axios from "axios";
 
-export const login = (email, password) => async (dispatch) => {
+export const login = (email, password) => async (dispatch, getState) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
@@ -49,17 +49,19 @@ export const login = (email, password) => async (dispatch) => {
       config
     );
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
+    localStorage.setItem("user", JSON.stringify(getState().user.user));
   } catch (error) {
     dispatch({ type: LOGIN_FAIL, payload: error.message });
   }
 };
 // /register
-export const register = (userData) => async (dispatch) => {
+export const register = (userData) => async (dispatch, getState) => {
   try {
     dispatch({ type: REGISTER_USER_REQUEST });
     const config = { headers: { "Content-Type": "multipart/form-data" } };
     const { data } = await axios.post(`/api/v1/register`, userData, config);
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
+    localStorage.setItem("user", JSON.stringify(getState().user.user));
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
@@ -85,6 +87,7 @@ export const logout = () => async (dispatch) => {
   try {
     await axios.get(`/api/v1/logout`);
     dispatch({ type: LOGOUT_SUCCESS });
+    localStorage.clear();
   } catch (error) {
     dispatch({ type: LOGOUT_FAIL, payload: error.message });
   }

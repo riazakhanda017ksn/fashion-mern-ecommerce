@@ -168,6 +168,6 @@ function App() {
   );
 }
 // "proxy": "http://192.168.0.107:5000"
-// "proxy": "http://192.168.1.10:5000"
+// "proxy": "http://192.168.1.11:5000"
 // mongodb+srv://rsm-ecommerce:2UfZByQIHUdNXrRI@cluster0.enpeg.mongodb.net/ecommerce?retryWrites=true&w=majority
 export default App;
