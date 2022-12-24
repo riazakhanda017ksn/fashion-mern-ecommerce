@@ -7,10 +7,6 @@
 # testing
 /mern-ecommerce/coverage
 
-# production
-/mern-ecommerce/build
-
-
 # misc
 /backend/config/config.env
 /mern-ecommerce/.DS_Store
