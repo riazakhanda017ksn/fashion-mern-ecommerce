@@ -15,8 +15,6 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
-//middleError
-app.use(errorMiddleWare);
 //cookie
 app.use(cookieParser());
 //
@@ -33,10 +31,17 @@ app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", review);
 app.use("/api/v1", subscribe);
-
 app.use(express.static(path.join(__dirname, "../mern-ecommerce/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../mern-ecommerce/build/index.html"));
+app.get("*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "../mern-ecommerce/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });
+
+// Middleware for Errors
+app.use(errorMiddleWare);
 module.exports = app;

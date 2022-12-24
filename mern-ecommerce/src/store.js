@@ -69,6 +69,11 @@ let initialState = {
       ? JSON.parse(localStorage.getItem("shippingInfo"))
       : {},
   },
+  user: {
+    user: localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : {},
+  },
 };
 const middleware = [thunk];
 const store = createStore(

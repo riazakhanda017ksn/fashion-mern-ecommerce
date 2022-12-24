@@ -49,7 +49,6 @@ export const login = (email, password) => async (dispatch, getState) => {
       config
     );
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
-    localStorage.setItem("user", JSON.stringify(getState().user.user));
   } catch (error) {
     dispatch({ type: LOGIN_FAIL, payload: error.message });
   }
@@ -61,7 +60,6 @@ export const register = (userData) => async (dispatch, getState) => {
     const config = { headers: { "Content-Type": "multipart/form-data" } };
     const { data } = await axios.post(`/api/v1/register`, userData, config);
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
-    localStorage.setItem("user", JSON.stringify(getState().user.user));
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
