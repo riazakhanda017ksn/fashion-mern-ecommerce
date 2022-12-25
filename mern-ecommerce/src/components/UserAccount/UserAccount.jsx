@@ -49,25 +49,26 @@ const UserAccount = () => {
             </Link>
           </div>
           <h1 className="shipping text-center mb-5 mt-3">user Information</h1>
-
-          <div className="shipping-information pb-5 mb-5">
-            <div className="left-side-information">
-              <label> _ID *</label> <br />
-              <input type="text" value={user?._id} readOnly />
-              <label> Email*</label> <br />
-              <input type="text" value={user?.email} readOnly />
-              <label> Date*</label> <br />
-              <input
-                type="text"
-                value={user?.createdAt?.slice(0, 10)}
-                readOnly
-              />
-            </div>
-            <div className="left-side-information">
-              <label> Name*</label> <br />
-              <input type="text" value={user?.name} readOnly />
-              <label> Role*</label> <br />
-              <input type="text" value={user?.role} readOnly />
+          <div className="container-of-shipping">
+            <div className="shipping-information pb-5 mb-5">
+              <div className="left-side-information">
+                <label> _ID *</label> <br />
+                <input type="text" value={user?._id} readOnly />
+                <label> Email*</label> <br />
+                <input type="text" value={user?.email} readOnly />
+                <label> Date*</label> <br />
+                <input
+                  type="text"
+                  value={user?.createdAt?.slice(0, 10)}
+                  readOnly
+                />
+              </div>
+              <div className="left-side-information">
+                <label> Name*</label> <br />
+                <input type="text" value={user?.name} readOnly />
+                <label> Role*</label> <br />
+                <input type="text" value={user?.role} readOnly />
+              </div>
             </div>
           </div>
         </>
