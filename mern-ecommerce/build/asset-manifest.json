@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2e41f13.css",
-    "main.js": "/static/js/main.0ca97e84.js",
+    "main.css": "/static/css/main.b6b5697d.css",
+    "main.js": "/static/js/main.4b97ea91.js",
     "static/js/787.392cea25.chunk.js": "/static/js/787.392cea25.chunk.js",
     "static/media/salehup_video (online-video-cutter.com).mp4": "/static/media/salehup_video (online-video-cutter.com).4675b04ad8ad30bfed49.mp4",
-    "static/media/3d.mp4": "/static/media/3d.51007fa81472ef9b6aff.mp4",
+    "static/media/3d.mp4": "/static/media/3d.5c8af14d11c513f4cae7.mp4",
     "static/media/subscribe.mp4": "/static/media/subscribe.40460dbe7c3db6adad49.mp4",
     "static/media/hero1.jpg": "/static/media/hero1.8b4746c561b1e993bce2.jpg",
     "static/media/riaz1.jpg": "/static/media/riaz1.f5fde2d3e54b36dbe8b2.jpg",
     "index.html": "/index.html",
-    "main.f2e41f13.css.map": "/static/css/main.f2e41f13.css.map",
-    "main.0ca97e84.js.map": "/static/js/main.0ca97e84.js.map",
+    "main.b6b5697d.css.map": "/static/css/main.b6b5697d.css.map",
+    "main.4b97ea91.js.map": "/static/js/main.4b97ea91.js.map",
     "787.392cea25.chunk.js.map": "/static/js/787.392cea25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2e41f13.css",
-    "static/js/main.0ca97e84.js"
+    "static/css/main.b6b5697d.css",
+    "static/js/main.4b97ea91.js"
   ]
 }
