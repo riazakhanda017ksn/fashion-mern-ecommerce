@@ -33,7 +33,7 @@
   padding-bottom: 5px !important;
   display: inline-block;
   transition: .3s ease-in-out;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
 .about-site p {
   font-size: 13px;

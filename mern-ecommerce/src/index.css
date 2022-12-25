@@ -370,11 +370,14 @@ color: rgb(255, 255, 255)
 
 
 .background-of-details-page h1 {
-  font-size: 40px;
+  font-size: 54px;
   text-transform: uppercase;
-  color: #76767685;
-  font-family: 'Lora';
-  font-weight: 400;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  text-align: center;
+  line-height: 68px;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
 }
 
 .background-of-details-page {
@@ -427,7 +430,7 @@ p.p-0 {
 .user_review_name_photo img {
   height: 50px;
   width: 50px;
-  margin-right: 3vh;
+  margin-right: 2vh;
   border-radius: 50%;
 }
 
@@ -471,7 +474,9 @@ p.p-0 {
   font-size: 13px;
   outline: none;
 }
-
+.react-stars span {
+  font-size: 15px !important;
+}
 
 .increment_decrement {
   display: flex;
@@ -510,6 +515,7 @@ button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-ktslay
   font-weight: 600;
   position: relative;
   top: 5px;
+  text-transform: capitalize;
 }
 
 .comment p {

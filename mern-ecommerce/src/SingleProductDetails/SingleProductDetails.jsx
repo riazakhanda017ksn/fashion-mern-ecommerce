@@ -133,7 +133,9 @@ const SingleProductDetails = ({ match }) => {
         }}
         className="background-of-details-page"
       >
-        <h1>pure ecommerce magnificence</h1>
+        <h1>
+          pure e-commerce <br /> magnificence
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
           similique ducimus rerum !
