@@ -43,36 +43,38 @@ function Sidebar() {
                 X
               </Link>
             </li>
-            <li className="nav-text">
-              <Link to="/">
-                <AiIcons.AiFillHome />
-                <span>Home</span>
-              </Link>
-            </li>
-            {user?.role === "admin" && (
+            <div className="view-height">
               <li className="nav-text">
-                <Link to="/dashboard">
-                  <DashboardIcon />
-                  <span>dashboard</span>
+                <Link to="/">
+                  <AiIcons.AiFillHome />
+                  <span>Home</span>
                 </Link>
               </li>
-            )}
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path} className={item.cName2}>
-                    {item.icon}
-                    <span>{item.title}</span>
+              {user?.role === "admin" && (
+                <li className="nav-text">
+                  <Link to="/dashboard">
+                    <DashboardIcon />
+                    <span>dashboard</span>
                   </Link>
                 </li>
-              );
-            })}
-            <li className="nav-text">
-              <a onClick={logOutUser} style={{ cursor: "pointer" }}>
-                <BiLogInCircle />
-                <span>logout</span>
-              </a>
-            </li>
+              )}
+              {SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path} className={item.cName2}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+              <li className="nav-text">
+                <a onClick={logOutUser} style={{ cursor: "pointer" }}>
+                  <BiLogInCircle />
+                  <span>logout</span>
+                </a>
+              </li>
+            </div>
           </ul>
         </nav>
       </IconContext.Provider>
