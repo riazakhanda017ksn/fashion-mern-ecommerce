@@ -60,7 +60,15 @@
   text-transform: lowercase;
   margin-right: 10px;
 }
-
+.css-9l3uo3 {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  font-family: 'Montserrat' !important;
+}
 
 .customer-service-n-social-icon ul {
   list-style: none;
