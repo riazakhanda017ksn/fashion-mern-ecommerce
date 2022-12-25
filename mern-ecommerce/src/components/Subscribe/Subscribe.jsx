@@ -40,8 +40,12 @@ const Subscribe = () => {
       <div className="video-section">
         <video src={videoOne} muted loop autoPlay></video>
         <div className="white-overly">
+          {" "}
           <div className="form-section">
-            <h1>Subscribe our website and Become a member of our website</h1>
+            {" "}
+            <div className="flex-part">
+              <h1>Subscribe our website and Become a member of our website</h1>{" "}
+            </div>
             <form onSubmit={createSubscribeSubmitHandler}>
               <div className="form">
                 <input

@@ -5,7 +5,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background: black;
-  font-family: 'Spartan';
+  font-family: 'Montserrat';
   padding: 50px;
   padding-bottom: 10px;
   padding-top: 60px;
@@ -18,8 +18,32 @@
 }
 .about-site h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.about-site p {
+  text-transform: initial !important;
+}
+.customer-service-n-social-icon ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 13px !important;
+  text-transform: initial !important;
+  padding-bottom: 5px !important;
+  display: inline-block;
+  transition: .3s ease-in-out;
+  text-transform: capitalize;
+}
+.about-site p {
+  font-size: 13px;
+  line-height: 25px;
+  text-transform: initial !important;
+  margin-right: 10px;
+  margin-bottom: 5px !important;
+}
+.customer-service-n-social-icon ul li a:hover{
+  border-bottom: 1px solid white;
 }
 .customer-service-n-social-icon {
   margin-left: 145px;

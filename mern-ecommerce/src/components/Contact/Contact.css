@@ -1,3 +1,8 @@
+
+.container {
+    margin: 0 auto;
+    width: 1280px!important;
+}
 .contact{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -30,9 +35,9 @@
     
 
     .contact-img img {
-        height: 800px;
+        height: auto;
         overflow: hidden;
-        width: 800px;
+        max-width: 100%;
         object-fit: contain;
     }
 
@@ -44,18 +49,23 @@
         padding: 16px 5px;
         margin-bottom: 44px;
     }
-
-    .contact-section input {
-        width: 100%;
+    .contact-section input, .contact-section textarea {
+        border: 1px solid #ddd;
+        font-family: 'Montserrat';
+        font-size: 12px;
         outline: none;
-        padding: 17px;
-        border: 1px solid #DDD;
-        margin-bottom: 24px;
-        font-family: 'Spartan';
-        font-size: 11px;
         text-transform: uppercase;
+        width: 100%;
+        text-align: inherit;
+        padding: 18px;
+        margin-bottom: 20px;
     }
 
+    .contact-section {
+    padding: 162px 0px;
+    padding-bottom: 10px !important;
+    padding-right: 0 !important;
+}
     .contact-section textarea {
         width: 100%;
         font-family: 'Spartan';
@@ -86,6 +96,10 @@
     }
   
     @media only screen and (max-width: 990px)  {
+        .container {
+            margin: 0 auto;
+            width: 100%!important;
+        }
         .contact{
             display: grid;
             grid-template-columns: repeat(1, 1fr);

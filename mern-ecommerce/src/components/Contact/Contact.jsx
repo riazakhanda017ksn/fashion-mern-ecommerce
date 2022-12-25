@@ -29,25 +29,32 @@ const Contact = () => {
     e.target.reset();
   }
   return (
-    <div className="contact" data-aos="fade-up">
-      <div className="contact-section" data-aos="fade-right">
-        <h1>get in touch</h1>
-        <form onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Name" /> <br />
-          <input type="email" name="email" placeholder="Email" /> <br />
-          <input type="text" name="subject" placeholder="Subject" /> <br />
-          <textarea
-            name="message"
-            cols="30"
-            rows="4"
-            placeholder="Message"
-          ></textarea>{" "}
-          <br />
-          <button type="submit">Send message</button>
-        </form>
-      </div>
-      <div className="contact-img" data-aos="fade-right">
-        <img src="https://i.ibb.co/Y013G87/hme-persona-portrait.webp" alt="" />
+    <div className="main-contact-container">
+      <div className="container">
+        <div className="contact">
+          <div className="contact-section">
+            <h1>get in touch</h1>
+            <form onSubmit={sendEmail}>
+              <input type="text" name="name" placeholder="Name" /> <br />
+              <input type="email" name="email" placeholder="Email" /> <br />
+              <input type="text" name="subject" placeholder="Subject" /> <br />
+              <textarea
+                name="message"
+                cols="30"
+                rows="6"
+                placeholder="Message"
+              ></textarea>{" "}
+              <br />
+              <button type="submit">Send message</button>
+            </form>
+          </div>
+          <div className="contact-img">
+            <img
+              src="https://i.ibb.co/Y013G87/hme-persona-portrait.webp"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
