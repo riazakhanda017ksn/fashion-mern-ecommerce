@@ -20,7 +20,7 @@ const Navbar = () => {
       link4Text="Contact"
       link1Url="/"
       link2Url="/products"
-      link3Url="/about"
+      link3Url="/"
       link4Url="/contact"
       link1ColorHover="white"
       link1Color="HSL(250, 100%, 75%)"
